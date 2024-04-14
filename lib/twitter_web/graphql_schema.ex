@@ -1,11 +1,11 @@
 defmodule TwitterWeb.GraphqlSchema do
-  use Absinthe.Schema
+  # use Absinthe.Schema
 
-  use AshGraphql, domains: [Twitter.Tweets]
+  # use AshGraphql, domains: [Twitter.Tweets]
 
-  query do
-  end
+  # query do
+  # end
 
-  mutation do
-  end
+  # mutation do
+  # end
 end

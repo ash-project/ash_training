@@ -13,6 +13,8 @@ defmodule TwitterWeb.AuthController do
   end
 
   def failure(conn, _activity, _reason) do
+    IO.inspect("HERE!")
+
     conn
     |> put_status(401)
     |> redirect(to: ~p"/sign-in")

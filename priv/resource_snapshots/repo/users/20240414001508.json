@@ -6,8 +6,8 @@
       "type": "uuid",
       "source": "id",
       "references": null,
-      "allow_nil?": false,
       "primary_key?": true,
+      "allow_nil?": false,
       "generated?": false
     },
     {
@@ -16,8 +16,8 @@
       "type": "citext",
       "source": "email",
       "references": null,
-      "allow_nil?": false,
       "primary_key?": false,
+      "allow_nil?": false,
       "generated?": false
     },
     {
@@ -26,13 +26,13 @@
       "type": "text",
       "source": "hashed_password",
       "references": null,
-      "allow_nil?": false,
       "primary_key?": false,
+      "allow_nil?": false,
       "generated?": false
     }
   ],
   "table": "users",
-  "hash": "6D7944E597F663BBAAAFF7D815105C86A68442A7570A256504147BD22A9D2FEF",
+  "hash": "1FF802E9C0D23ED31440F645D30E48F17523B791025778682218C5B0B72D42DF",
   "repo": "Elixir.Twitter.Repo",
   "schema": null,
   "multitenancy": {

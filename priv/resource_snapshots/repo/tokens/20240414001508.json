@@ -6,8 +6,8 @@
       "type": "utc_datetime_usec",
       "source": "updated_at",
       "references": null,
-      "allow_nil?": false,
       "primary_key?": false,
+      "allow_nil?": false,
       "generated?": false
     },
     {
@@ -16,8 +16,8 @@
       "type": "utc_datetime_usec",
       "source": "created_at",
       "references": null,
-      "allow_nil?": false,
       "primary_key?": false,
+      "allow_nil?": false,
       "generated?": false
     },
     {
@@ -26,8 +26,8 @@
       "type": "map",
       "source": "extra_data",
       "references": null,
-      "allow_nil?": true,
       "primary_key?": false,
+      "allow_nil?": true,
       "generated?": false
     },
     {
@@ -36,8 +36,8 @@
       "type": "text",
       "source": "purpose",
       "references": null,
-      "allow_nil?": false,
       "primary_key?": false,
+      "allow_nil?": false,
       "generated?": false
     },
     {
@@ -46,8 +46,8 @@
       "type": "utc_datetime",
       "source": "expires_at",
       "references": null,
-      "allow_nil?": false,
       "primary_key?": false,
+      "allow_nil?": false,
       "generated?": false
     },
     {
@@ -56,8 +56,8 @@
       "type": "text",
       "source": "subject",
       "references": null,
-      "allow_nil?": false,
       "primary_key?": false,
+      "allow_nil?": false,
       "generated?": false
     },
     {
@@ -66,13 +66,13 @@
       "type": "text",
       "source": "jti",
       "references": null,
-      "allow_nil?": false,
       "primary_key?": true,
+      "allow_nil?": false,
       "generated?": false
     }
   ],
   "table": "tokens",
-  "hash": "18B10E5145476C829B5AB4BCDA5C0A4D9D8862A4726C3D03778420A8313D01E8",
+  "hash": "79F4EDB8FC6679AFB03D84A27742E8534D4FE0AD41952729D431D3D6B2023199",
   "repo": "Elixir.Twitter.Repo",
   "schema": null,
   "multitenancy": {

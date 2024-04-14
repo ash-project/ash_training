@@ -5,6 +5,10 @@ defmodule Twitter.Accounts.Token do
     authorizers: [Ash.Policy.Authorizer],
     domain: Twitter.Accounts
 
+  token do
+    domain Twitter.Accounts
+  end
+
   postgres do
     table "tokens"
     repo Twitter.Repo

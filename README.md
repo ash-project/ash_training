@@ -1,18 +1,53 @@
 # Twitter
 
-To start your Phoenix server:
+## Setup
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+To get started, you will want to ensure that you have
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+- a terminal (Terminal.app, iTerm2)
+- a recent version of Elixir
+- a recent version of Erlang
+- a recent version of Postgresql
+- a code editor
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+These instructions are for mac & linux. If you are on windows, we will figure it out in person. It is absolutely not a problem if you are.
 
-## Learn more
+### Terminal
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+You can use the builtin terminal. Otherwise,I recommend iTerm2.
+
+### Installing `homebrew`
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### Installing `asdf`
+
+If you already have `asdf` installed, you can skip this section. If you don't know your shell, use `echo $SHELL` in your terminal. If you use a different shell, we'll figure it out in person.
+
+```bash
+brew install asdf
+
+# if your shell is bash
+echo -e "\n. \"$(brew --prefix asdf)/libexec/asdf.sh\"" >> ~/.bashrc
+echo -e "\n. \"$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash\"" >> ~/.bashrc
+
+# if your shell is zsh
+echo -e "\n. \"$(brew --prefix asdf)/libexec/asdf.sh\"" >> ~/.zshrc
+echo -e "\n. \"$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash\"" >> ~/.zshrc
+```
+
+### Installing Elixir/Erlang with asdf
+
+```bash
+# in the project root directory
+asdf install
+```
+
+### Installing Postgresql
+
+```bash
+brew install postgresql
+brew services start postgresql
+```

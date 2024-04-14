@@ -1,0 +1,29 @@
+{
+  "attributes": [
+    {
+      "default": "fragment(\"gen_random_uuid()\")",
+      "size": null,
+      "type": "uuid",
+      "source": "id",
+      "references": null,
+      "primary_key?": true,
+      "allow_nil?": false,
+      "generated?": false
+    }
+  ],
+  "table": "tweets",
+  "hash": "5209FE3BD4F8E1C8877CC5CDF5894A314BEADF7F4C07286453C54575B939BDEF",
+  "repo": "Elixir.Twitter.Repo",
+  "schema": null,
+  "multitenancy": {
+    "global": null,
+    "strategy": null,
+    "attribute": null
+  },
+  "identities": [],
+  "base_filter": null,
+  "check_constraints": [],
+  "custom_indexes": [],
+  "custom_statements": [],
+  "has_create_action": false
+}

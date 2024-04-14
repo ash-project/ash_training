@@ -1,4 +1,4 @@
-defmodule Twitter.Repo.Migrations.Install2Extensions20240412165434 do
+defmodule Twitter.Repo.Migrations.Install2Extensions20240414001505 do
   @moduledoc """
   Installs any extensions that are mentioned in the repo's `installed_extensions/0` callback
 

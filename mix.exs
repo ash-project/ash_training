@@ -40,7 +40,7 @@ defmodule Twitter.MixProject do
       {:ash_authentication, "~> 4.0.0-rc"},
       {:ash_authentication_phoenix, "~> 2.0.0-rc"},
       {:ash_graphql, "~> 1.0.0-rc"},
-      {:ash_json_api, "~> 1.0.0-rc.1"},
+      {:ash_json_api, "~> 1.0.0-rc"},
       {:picosat_elixir, "~> 0.2"},
       {:open_api_spex, "~> 3.16"},
       {:redoc_ui_plug, "~> 0.2"},

@@ -11,13 +11,12 @@ defmodule TwitterWeb.TweetLive.FormComponent do
       </.header>
 
       <.simple_form
-        for={@form}
+        for={%{}}
+        as={:tweet}
         id="tweet-form"
         phx-target={@myself}
-        phx-change="validate"
         phx-submit="save"
       >
-        <.input label="Text" type="textarea" field={@form[:text]} />
         <:actions>
           <.button phx-disable-with="Saving...">Save Tweet</.button>
         </:actions>
@@ -30,48 +29,36 @@ defmodule TwitterWeb.TweetLive.FormComponent do
   def update(assigns, socket) do
     {:ok,
      socket
-     |> assign(assigns)
-     |> assign_form()}
+     |> assign(assigns)}
   end
 
   @impl true
-  def handle_event("validate", %{"tweet" => tweet_params}, socket) do
-    {:noreply, assign(socket, form: AshPhoenix.Form.validate(socket.assigns.form, tweet_params))}
-  end
+  def handle_event("save", params, socket) do
+    result =
+      if socket.assigns.tweet do
+        # we're updating a tweet
+        {:error, "Not implemented"}
+      else
+        Twitter.Tweets.Tweet
+        |> Ash.Changeset.for_create(:create, params["tweet"] || %{}, actor: socket.assigns.current_user)
+        |> Ash.create()
+      end
 
-  def handle_event("save", %{"tweet" => tweet_params}, socket) do
-    case AshPhoenix.Form.submit(socket.assigns.form, params: tweet_params) do
+    case result do
       {:ok, tweet} ->
         notify_parent({:saved, tweet})
 
         socket =
           socket
-          |> put_flash(:info, "Tweet #{socket.assigns.form.source.type}d successfully")
+          |> put_flash(:info, "Success!")
           |> push_patch(to: socket.assigns.patch)
 
         {:noreply, socket}
 
-      {:error, form} ->
-        {:noreply, assign(socket, form: form)}
+      {:error, _error} ->
+        {:noreply, socket}
     end
   end
 
   defp notify_parent(msg), do: send(self(), {__MODULE__, msg})
-
-  defp assign_form(%{assigns: %{tweet: tweet}} = socket) do
-    form =
-      if tweet do
-        AshPhoenix.Form.for_update(tweet, :update,
-          as: "tweet",
-          actor: socket.assigns.current_user
-        )
-      else
-        AshPhoenix.Form.for_create(Twitter.Tweets.Tweet, :create,
-          as: "tweet",
-          actor: socket.assigns.current_user
-        )
-      end
-
-    assign(socket, form: to_form(form))
-  end
 end

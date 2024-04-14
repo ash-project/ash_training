@@ -6,7 +6,7 @@ defmodule Twitter.Accounts.User do
     domain: Twitter.Accounts
 
   admin do
-    actor? true
+    actor?(true)
   end
 
   postgres do
@@ -33,7 +33,7 @@ defmodule Twitter.Accounts.User do
     end
 
     policy action_type(:read) do
-      authorize_if expr(id == ^actor(:id))
+      authorize_if always()
     end
   end
 

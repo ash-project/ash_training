@@ -23,12 +23,12 @@ defmodule TwitterWeb.Router do
 
   if Mix.env() == :dev do
     import AshAdmin.Router
+
     scope "/" do
       pipe_through :browser
-      ash_admin "/admin"
+      ash_admin("/admin")
     end
   end
-
 
   scope "/", TwitterWeb do
     pipe_through :browser
