@@ -34,7 +34,7 @@ defmodule Twitter.Accounts.User do
     end
 
     policy action_type(:read) do
-      authorize_if always()
+      authorize_if expr(id == ^actor(:id))
     end
   end
 
