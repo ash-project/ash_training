@@ -20,5 +20,5 @@ defmodule TwitterWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :twitter
+  use Gettext.Backend, otp_app: :twitter
 end

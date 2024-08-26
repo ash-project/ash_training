@@ -17,7 +17,7 @@ defmodule TwitterWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import TwitterWeb.Gettext
+  use Gettext, backend: TwitterWeb.Gettext
 
   @doc """
   Renders a modal.

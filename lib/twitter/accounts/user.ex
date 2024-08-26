@@ -22,6 +22,7 @@ defmodule Twitter.Accounts.User do
     end
 
     tokens do
+      enabled? true
       token_resource Twitter.Accounts.Token
       signing_secret Twitter.Accounts.Secrets
     end

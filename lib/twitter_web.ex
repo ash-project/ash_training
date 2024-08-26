@@ -43,7 +43,7 @@ defmodule TwitterWeb do
         layouts: [html: TwitterWeb.Layouts]
 
       import Plug.Conn
-      import TwitterWeb.Gettext
+      use Gettext, backend: TwitterWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -85,7 +85,7 @@ defmodule TwitterWeb do
       import Phoenix.HTML
       # Core UI components and translation
       import TwitterWeb.CoreComponents
-      import TwitterWeb.Gettext
+      use Gettext, backend: TwitterWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
