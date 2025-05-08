@@ -54,7 +54,7 @@ iex> Ash.Domain.Info.resources(Twitter.Tweets)
 5. Run the following to add the `AshPostgres` extension to the resource:
 
 ```bash
-mix ash.patch.extend Twitter.Tweets.Tweet postgres
+mix ash.extend Twitter.Tweets.Tweet postgres
 ```
 
 This command

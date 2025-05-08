@@ -13,7 +13,7 @@
 1. Add the `Ash.Policy.Authorizer` authorizer to `Tweet`.
 
 ```elixir
-mix ash.patch.extend Twitter.Tweets.Tweet Ash.Policy.Authorizer
+mix ash.extend Twitter.Tweets.Tweet Ash.Policy.Authorizer
 ```
 
 2. Add a policy for `action_type(:read)` on tweets.

@@ -15,7 +15,7 @@
 2. Add `AshGraphql.Resource` to the extensions
 
 ```bash
-mix ash.patch.extend Twitter.Tweets.Tweet graphql
+mix ash.extend Twitter.Tweets.Tweet graphql
 ```
 
 3. Add a `query` to get the `:feed`

@@ -13,7 +13,7 @@
 1. Add `AshJsonApi.Resource` to the extensions to `Twitter.Tweets.Tweet`
 
 ```bash
-mix ash.patch.extend Twitter.Tweets.Tweet json_api
+mix ash.extend Twitter.Tweets.Tweet json_api
 ```
 
 2. Add the json api type to the resource
