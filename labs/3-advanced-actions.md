@@ -132,7 +132,6 @@ criteria, not a specific like. For that, even though we are destroying only a si
 we would use `Ash.bulk_destroy!`. For example:
 
 ```elixir
-# this is an example, not something to add to your code
 Ash.bulk_destroy!(
   Twitter.Tweets.Like,
   :unlike,
