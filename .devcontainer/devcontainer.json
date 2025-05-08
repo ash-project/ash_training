@@ -1,0 +1,22 @@
+{
+	"name": "ash_training",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "elixir",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"jakebecker.elixir-ls",
+				"phoenixframework.phoenix"
+			]
+		}
+	},
+	"forwardPorts": [
+		4000,
+		4001,
+		5432
+	],
+	// "postCreateCommand": "mix deps.get"
+	// Connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
