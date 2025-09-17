@@ -101,7 +101,6 @@ socket.assigns.tweet
 |> Ash.update()
 ```
 
-12. Finally, we can add a `:destroy` action. This is a simple action that needs no options or configuration. Once that is done, you'll be able to destroy a tweet.
 
 ## Try on your own
 
