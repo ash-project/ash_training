@@ -46,7 +46,10 @@ For an API extension to show any attributes, calculations, they must be marked `
 5. You'll notice also that the `links` are empty. We can add a `get` route to fetch a tweet.
 
 ```elixir
-get :read, primary?: true
+base_route "/tweets", Twitter.Tweets.Tweet do
+  ...
+  get :read, primary?: true
+end
 ```
 
 This `primary? true` causes the `links` to use this route as the `self` link for any given tweet.

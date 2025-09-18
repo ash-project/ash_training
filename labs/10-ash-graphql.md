@@ -10,15 +10,13 @@
 
 ## Steps
 
-1. Uncomment the contents of `TwitterWeb.GraphqlSchema` in `lib/twitter_web/graphql_schema.ex`.
-
-2. Add `AshGraphql.Resource` to the extensions
+1. Add `AshGraphql.Resource` to the extensions
 
 ```bash
 mix ash.extend Twitter.Tweets.Tweet graphql
 ```
 
-3. Add a `query` to get the `:feed`
+2. Add a `query` to get the `:feed`
 
 ```elixir
 graphql do
@@ -26,7 +24,7 @@ graphql do
 end
 ```
 
-4. Add the extension and a `query` to the `Twitter.Tweets`.
+3. Add the extension and a `query` to the `Twitter.Tweets`.
 
 ```elixir
 use Ash.Domain,
@@ -40,7 +38,7 @@ graphql do
 end
 ```
 
-5. Go to `localhost:4000/api/gql/playground`, and try the following query.
+4. Go to `localhost:4000/api/gql/playground`, and try the following query.
 Make sure that all fields referenced below have been made `public? true`.
 
 ```graphql

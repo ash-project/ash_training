@@ -72,7 +72,7 @@ defmodule TwitterWeb.Router do
 
       forward "/playground",
               Absinthe.Plug.GraphiQL,
-              schema: Module.concat(["TwitterWeb.GraphqlSchema"]),
+              schema: Module.concat(["Twitter.GraphqlSchema"]),
               interface: :playground
 
       forward "/", Absinthe.Plug, schema: Module.concat(["TwitterWeb.GraphqlSchema"])
